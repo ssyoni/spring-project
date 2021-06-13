@@ -3,7 +3,7 @@ package noums.study.pizzahouse.enums;
 import lombok.Getter;
 
 @Getter
-public enum Menu {
+public enum PizzaMenu {
 
     BULGOGI_PIZZA(10000),
     CHEESE_PIZZA(8000),
@@ -11,5 +11,5 @@ public enum Menu {
 
     private int price;
 
-    Menu(int price) { this.price = price;}
+    PizzaMenu(int price) { this.price = price;}
 }
