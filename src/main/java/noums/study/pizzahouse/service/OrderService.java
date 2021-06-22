@@ -17,9 +17,9 @@ public class OrderService {
         // 주문
         // ...
         // 결제
-        payService.pay(req.getPizzaMenu().getPrice());
+        //payService.pay(req.getPizzaMenu().getPrice());
         // 제조
-       // kitchenManager.makeFood(req.getMenu);
+        kitchenManager.callManager(req.getMenu());
         return "complete";
     }
 

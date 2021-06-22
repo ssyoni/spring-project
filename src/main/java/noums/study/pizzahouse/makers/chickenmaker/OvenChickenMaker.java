@@ -2,7 +2,7 @@ package noums.study.pizzahouse.makers.chickenmaker;
 
 import noums.study.pizzahouse.enums.ChickenMenu;
 
-public class OvenChickenMaker implements chickenMaker{
+public class OvenChickenMaker implements ChickenMaker{
 
     @Override
     public ChickenMenu getMenu() {

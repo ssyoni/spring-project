@@ -21,4 +21,5 @@ public class PotatoPizzaMaker implements PizzaMaker {
         return "포테이토 피자 굽기";
     }
 
+
 }

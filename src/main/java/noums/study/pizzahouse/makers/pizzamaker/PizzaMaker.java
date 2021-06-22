@@ -2,7 +2,7 @@ package noums.study.pizzahouse.makers.pizzamaker;
 
 import noums.study.pizzahouse.enums.PizzaMenu;
 
-public interface PizzaMaker {
+public interface PizzaMaker  {
 
     // 인터페이스 default 알아보기 ....
     default String makeDough() {

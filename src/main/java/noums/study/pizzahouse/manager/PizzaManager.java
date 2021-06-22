@@ -2,6 +2,7 @@ package noums.study.pizzahouse.manager;
 
 
 import lombok.RequiredArgsConstructor;
+import noums.study.pizzahouse.enums.FoodMenu;
 import noums.study.pizzahouse.enums.PizzaMenu;
 import noums.study.pizzahouse.makers.pizzamaker.PizzaMaker;
 import org.springframework.context.ApplicationContext;
@@ -14,7 +15,7 @@ import java.util.Map;
 
 @RequiredArgsConstructor
 @Component
-public class PizzaManager {
+public class PizzaManager implements FoodManager{
 
     final private ApplicationContext applicationContext;
 
@@ -30,16 +31,20 @@ public class PizzaManager {
         }
     }
 
-    // 피자 종류별로 인터페이스를 구현한 이유 !
-    // 피자 종류가 많아지면 조건식으로 처리하기가 한계가 있음....
-    // ㅠ_ㅠ.... 8_8....어떡하지...ㅠㅠ...
 
-    public String makePizza(PizzaMenu pizzaMenu) {
-        PizzaMaker pizzaMaker = makers.get(pizzaMenu);
+    @Override
+    public String getPart() {
+        return "pizza";
+    }
+
+    @Override
+    public String makeFood(FoodMenu foodMenu) {
+        PizzaMaker pizzaMaker = makers.get(foodMenu);
         pizzaMaker.prepare();
         pizzaMaker.makeDough();
         pizzaMaker.bake();
         return "pizza";
     }
+
 
 }
