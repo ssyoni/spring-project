@@ -2,7 +2,7 @@ package noums.study.pizzahouse.service;
 
 import lombok.RequiredArgsConstructor;
 import noums.study.pizzahouse.bean.OrderRequest;
-import noums.study.pizzahouse.manager.KitchenManager;
+import noums.study.pizzahouse.food.manager.KitchenManager;
 import org.springframework.stereotype.Service;
 
 @RequiredArgsConstructor

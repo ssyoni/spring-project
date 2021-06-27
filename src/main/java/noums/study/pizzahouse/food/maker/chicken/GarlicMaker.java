@@ -1,4 +1,4 @@
-package noums.study.pizzahouse.maker.chicken;
+package noums.study.pizzahouse.food.maker.chicken;
 
 import noums.study.pizzahouse.enums.Menu;
 import org.springframework.stereotype.Component;

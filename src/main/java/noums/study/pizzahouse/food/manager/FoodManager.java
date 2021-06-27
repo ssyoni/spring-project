@@ -1,4 +1,4 @@
-package noums.study.pizzahouse.manager;
+package noums.study.pizzahouse.food.manager;
 
 import noums.study.pizzahouse.enums.Menu;
 

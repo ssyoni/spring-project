@@ -1,9 +1,9 @@
-package noums.study.pizzahouse.maker.pizza;
+package noums.study.pizzahouse.food.maker.pizza;
 
 
 import lombok.RequiredArgsConstructor;
 import noums.study.pizzahouse.enums.Menu;
-import noums.study.pizzahouse.manager.FoodManager;
+import noums.study.pizzahouse.food.manager.FoodManager;
 import org.springframework.context.ApplicationContext;
 import org.springframework.stereotype.Component;
 
