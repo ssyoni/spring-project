@@ -16,7 +16,7 @@ public class OrderService {
         // 주문
         // ...
         // 결제
-        payService.pay(req.getMenu().getPrice());
+        payService.pay(req.getPayMethod(), req.getMenu().getPrice());
         // 제조
         manager.makeFood(req.getMenu());
         return "complete";

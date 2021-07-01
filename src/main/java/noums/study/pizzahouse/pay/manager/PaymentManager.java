@@ -23,16 +23,16 @@ public class PaymentManager {
     public void init() {
         Collection<PaymentMethod> managerCollection = applicationContext.getBeansOfType(PaymentMethod.class).values();
         for (PaymentMethod manager : managerCollection) {
-            if (managers.put(manager.getPaymentMethod(), manager) != null) {
+            if (managers.put(manager.getPayMethod(), manager) != null) {
                 throw new IllegalArgumentException("managers put 과정에서 에러 발생");
             }
         }
     }
 
-    public String processPayment(PaymentMethod method, int amount) {
-
-
-        return null;
+    public String processPayment(PayMethod method, int amount) {
+        PaymentMethod paymentMethod = managers.get(method);
+        paymentMethod.pay(method, amount);
+        return "결제 완료";
     }
 
 }
