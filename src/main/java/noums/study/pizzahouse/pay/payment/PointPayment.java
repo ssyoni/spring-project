@@ -2,7 +2,9 @@ package noums.study.pizzahouse.pay.payment;
 
 import noums.study.pizzahouse.enums.PayMethod;
 import noums.study.pizzahouse.pay.manager.PaymentMethod;
+import org.springframework.stereotype.Component;
 
+@Component
 public class PointPayment implements PaymentMethod {
     @Override
     public PayMethod getPayMethod() {
