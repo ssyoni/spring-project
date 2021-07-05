@@ -1,12 +1,14 @@
 package noums.study.pizzahouse.makers.chickenmaker;
 
-import noums.study.pizzahouse.enums.ChickenMenu;
+import noums.study.pizzahouse.enums.FoodMenu;
+import org.springframework.stereotype.Component;
 
+@Component
 public class OvenChickenMaker implements ChickenMaker{
 
     @Override
-    public ChickenMenu getMenu() {
-        return ChickenMenu.OVEN_CHICKEN;
+    public FoodMenu getMenu() {
+        return FoodMenu.OVEN_CHICKEN;
     }
 
     @Override

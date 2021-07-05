@@ -32,10 +32,13 @@ class PizzahouseApplicationTests {
             MediaType.APPLICATION_JSON.getSubtype(),
             Charset.forName("utf8"));
 
+    // BULGOGI_PIZZA
+    // FRIED_CHICKEN
     @Test
     public void postUrlTest() throws Exception {
         this.mockMvc.perform(post("/orders").contentType(contentType)
-                .content("{\"menu\" : \"BULGOGI_PIZZA\"}")).andExpect(status().isOk()).andDo(print());
+                .content("{\"menu\" : \"FRIED_CHICKEN\"}")).andExpect(status().isOk()).andDo(print());
+
     }
 
 }

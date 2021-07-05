@@ -1,14 +1,14 @@
 package noums.study.pizzahouse.makers.pizzamaker;
 
-import noums.study.pizzahouse.enums.PizzaMenu;
+import noums.study.pizzahouse.enums.FoodMenu;
 import org.springframework.stereotype.Component;
 
 @Component
 public class PotatoPizzaMaker implements PizzaMaker {
 
     @Override
-    public PizzaMenu getMenu() {
-        return PizzaMenu.POTATO_PIZZA;
+    public FoodMenu getMenu() {
+        return FoodMenu.POTATO_PIZZA;
     }
 
     @Override

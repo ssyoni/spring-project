@@ -15,11 +15,11 @@ public class OrderService {
 
     public String order(OrderRequest req) {
         // 주문
-        // ...
+
         // 결제
         //payService.pay(req.getPizzaMenu().getPrice());
         // 제조
-        kitchenManager.callManager(req.getMenu());
+        kitchenManager.makeFood(req.getMenu());
         return "complete";
     }
 

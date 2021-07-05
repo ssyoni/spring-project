@@ -1,14 +1,14 @@
 package noums.study.pizzahouse.makers.chickenmaker;
 
-import noums.study.pizzahouse.enums.ChickenMenu;
+import noums.study.pizzahouse.enums.FoodMenu;
 
 public interface ChickenMaker  {
 
-    default String makeDough() {
+/*    default String makeDough() {
         return "닭 손질하기";
-    }
+    }*/
 
-    public ChickenMenu getMenu();
+    public FoodMenu getMenu();
 
     public String prepare();
 
