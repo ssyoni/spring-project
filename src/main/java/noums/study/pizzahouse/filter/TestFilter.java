@@ -1,6 +1,7 @@
 package noums.study.pizzahouse.filter;
 
 import noums.study.pizzahouse.bean.RereadableRequestWrapper;
+import org.springframework.stereotype.Component;
 import org.springframework.web.filter.OncePerRequestFilter;
 import org.springframework.web.util.ContentCachingResponseWrapper;
 
@@ -10,7 +11,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebFilter(urlPatterns = "/test")
+@Component
+@WebFilter(urlPatterns = "/orders")
 public class TestFilter extends OncePerRequestFilter {
 
     @Override

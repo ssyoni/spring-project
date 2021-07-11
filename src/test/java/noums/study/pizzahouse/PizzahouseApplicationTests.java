@@ -34,16 +34,17 @@ class PizzahouseApplicationTests {
     @Autowired
     private ObjectMapper objectMapper;
 
-    private MediaType contentType = new MediaType(MediaType.APPLICATION_JSON.getType(),
-            MediaType.APPLICATION_JSON.getSubtype(),
-            Charset.forName("utf8"));
+//    private MediaType contentType = new MediaType(MediaType.APPLICATION_JSON.getType(),
+//            MediaType.APPLICATION_JSON.getSubtype(),
+//            Charset.forName("utf8"));
 
     // BULGOGI_PIZZA
     // FRIED_CHICKEN
     @Test
     public void postUrlTest() throws Exception {
-        this.mockMvc.perform(post("/orders").contentType(contentType)
-                .content("{\"menu\" : \"FRIED_CHICKEN\", \"pay\" : \"CARD\"}")).andExpect(status().isOk()).andDo(print());
+        this.mockMvc.perform(post("/orders").contentType(MediaType.APPLICATION_JSON)
+                .characterEncoding("utf8")
+                .content("{\"menu\" : \"TESTS\", \"pay\" : \"CARD\"}")).andExpect(status().isOk()).andDo(print());
     }
 
     @Test
@@ -51,7 +52,6 @@ class PizzahouseApplicationTests {
         //Given
         JSONObject jsonObject = new JSONObject();
         jsonObject.put("menu", "FRIED_CHICKEN");
-       // jsonObject.put("payMethod", "CARD");
 
         //When
         mockMvc.perform(MockMvcRequestBuilders.post("/orders")
