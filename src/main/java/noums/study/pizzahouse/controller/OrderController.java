@@ -16,13 +16,14 @@ public class OrderController {
 
     @PostMapping()
     public ResponseEntity<?> order(@RequestBody OrderRequest req) {
+        System.out.println("post controller");
         return ResponseEntity.ok(service.order(req));
     }
 
     @GetMapping()
-    public ResponseEntity<?> orderTest() {
-        OrderRequest req = new OrderRequest();
-        req.setMenu(FoodMenu.FRIED_CHICKEN);
+    public ResponseEntity<?> orderTest(@RequestBody OrderRequest req) {
+        OrderRequest request = new OrderRequest();
+        req.setMenu(FoodMenu.BULGOGI_PIZZA);
         return ResponseEntity.ok(service.order(req));
     }
 
