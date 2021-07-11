@@ -43,14 +43,15 @@ class PizzahouseApplicationTests {
     @Test
     public void postUrlTest() throws Exception {
         this.mockMvc.perform(post("/orders").contentType(contentType)
-                .content("{\"menu\" : \"FRIED_CHICKEN\"}")).andExpect(status().isOk()).andDo(print());
+                .content("{\"menu\" : \"FRIED_CHICKEN\", \"pay\" : \"CARD\"}")).andExpect(status().isOk()).andDo(print());
     }
 
     @Test
     void failToOrder() throws Exception {
         //Given
         JSONObject jsonObject = new JSONObject();
-        jsonObject.put("menu", "WATERMELON");
+        jsonObject.put("menu", "FRIED_CHICKEN");
+       // jsonObject.put("payMethod", "CARD");
 
         //When
         mockMvc.perform(MockMvcRequestBuilders.post("/orders")

@@ -4,6 +4,7 @@ import lombok.RequiredArgsConstructor;
 import noums.study.pizzahouse.bean.OrderRequest;
 import noums.study.pizzahouse.manager.KitchenManager;
 import noums.study.pizzahouse.manager.PizzaManager;
+import noums.study.pizzahouse.pay.PayManager;
 import org.springframework.stereotype.Service;
 
 @RequiredArgsConstructor
@@ -11,13 +12,13 @@ import org.springframework.stereotype.Service;
 public class OrderService {
 
     final private KitchenManager kitchenManager;
-    final private PayService payService;
+    final private PayManager payManager;
 
     public String order(OrderRequest req) {
         // 주문
 
         // 결제
-        //payService.pay(req.getPizzaMenu().getPrice());
+        payManager.doPayProcess(req.getPay(), req.getMenu().getPrice());
         // 제조
         kitchenManager.makeFood(req.getMenu());
         return "complete";

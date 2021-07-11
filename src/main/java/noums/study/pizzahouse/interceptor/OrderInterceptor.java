@@ -23,7 +23,6 @@ public class OrderInterceptor implements HandlerInterceptor {
 
         final RereadableRequestWrapper rereadableRequestWrapper = (RereadableRequestWrapper) request;
 
-//
         if (rereadableRequestWrapper.getContentType() != null && rereadableRequestWrapper.getContentType().contains("application/json")){
           if(rereadableRequestWrapper.getRawData() != null && rereadableRequestWrapper.getRawData().length != 0){
             String data = rereadableRequestWrapper.getData();
