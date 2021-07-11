@@ -15,7 +15,7 @@ import java.util.Arrays;
 public class SimpleFilter {
 
 
-    @Bean
+    //@Bean
     public FilterRegistrationBean<MyFilter> myFilter() {
         // FilterRegistrationBean으로 감싸지 않아도 필터 작동은 한다.
         // 하지만 urlpattern 추가 등의 FilterRegistrationBean에서 제공해주는 기능을 사용하고 싶다면 감싸는게 편하다.
