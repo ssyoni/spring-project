@@ -13,6 +13,7 @@ public class OrderService {
     final private PayService payService;
 
     public String order(OrderRequest req) {
+        System.out.println("##### OrderService order");
         // 주문
         // ...
         // 결제
