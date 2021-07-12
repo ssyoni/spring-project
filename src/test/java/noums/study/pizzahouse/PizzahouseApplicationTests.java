@@ -51,7 +51,8 @@ class PizzahouseApplicationTests {
     void failToOrder() throws Exception {
         //Given
         JSONObject jsonObject = new JSONObject();
-        jsonObject.put("menu", "FRIED_CHICKEN");
+        jsonObject.put("menu", "BULGOGI_PIZZA");
+        jsonObject.put("pay", "CARD");
 
         //When
         mockMvc.perform(MockMvcRequestBuilders.post("/orders")

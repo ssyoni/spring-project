@@ -11,8 +11,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@Component
-@WebFilter(urlPatterns = "/orders")
+//@Component
+//@WebFilter(urlPatterns = "/orders")
 public class TestFilter extends OncePerRequestFilter {
 
     @Override
@@ -22,11 +22,11 @@ public class TestFilter extends OncePerRequestFilter {
 
     @Override
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain) throws ServletException, IOException {
-        System.out.println(">>>>>>> doFilterInternal");
-        RereadableRequestWrapper rereadableRequestWrapper = new RereadableRequestWrapper(request);
-        ContentCachingResponseWrapper responseWrapper = new ContentCachingResponseWrapper(response);
-
-        filterChain.doFilter(rereadableRequestWrapper, responseWrapper);
+//        System.out.println(">>>>>>> doFilterInternal");
+//        RereadableRequestWrapper rereadableRequestWrapper = new RereadableRequestWrapper(request);
+//        ContentCachingResponseWrapper responseWrapper = new ContentCachingResponseWrapper(response);
+//
+//        filterChain.doFilter(rereadableRequestWrapper, responseWrapper);
 
     }
 }
