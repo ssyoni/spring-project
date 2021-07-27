@@ -2,7 +2,7 @@ package noums.study.pizzahouse.bean;
 
 import lombok.Getter;
 import org.apache.commons.lang3.StringUtils;
-import org.apache.maven.surefire.shade.org.apache.commons.io.IOUtils;;
+import org.apache.maven.surefire.shade.org.apache.commons.io.IOUtils;
 
 import javax.servlet.ReadListener;
 import javax.servlet.ServletInputStream;
